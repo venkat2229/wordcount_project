@@ -1,0 +1,30 @@
+
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="jumbotron">
+<h1>There are {{list}} words</h1>
+
+<h1>Your Text:</h1><br/>
+<div class="jumbotron" style="background:grey;width:900px;">
+<p >{{mytext}}</p>
+</div>
+<br/>
+<h1>words =>counts</h1><br/>
+
+{% for word,count in dic %}
+<table border="1" align="center">
+<tr>
+
+<td>{{word}}=>{{count}}<br/></td>
+</tr>
+</table>
+{%endfor%}
+<form action="{% url "thank" %}">
+  <input type="submit" value="Done!!!">
+</form>
+</div>
+</body>
+</html>
